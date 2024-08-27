@@ -5,14 +5,14 @@ on:
   pull_request:
 jobs:
   run-static-codebase-analysis:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps: 
-      -uses: actions/checkout@v4
-      -name: install dependencies
-       run: npm i 
-      -name: Run linter
-       run: npm run lint
-      -name: Run formater
-       run: npm run fortmat
-      -name: Run type-check
-       run: npm run type-check
+      - uses: actions/checkout@v4
+      - name: install dependencies
+        run: npm i 
+      - name: Run linter
+        run: npm run lint
+      - name: Run formater
+        run: npm run fortmat
+      - name: Run type-check
+        run: npm run type-check
