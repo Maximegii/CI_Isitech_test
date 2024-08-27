@@ -13,6 +13,6 @@ jobs:
       - name: Run linter
         run: npm run lint
       - name: Run formater
-        run: npm run fortmat
+        run: npm run format
       - name: Run type-check
         run: npm run type-check
