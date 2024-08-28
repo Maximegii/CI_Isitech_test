@@ -3,13 +3,14 @@ import { FC } from "react";
 type IProps = {
   text: string;
   onClick: () => void;
+  testId: string;
 };
 
 const Button: FC<IProps> = (props) => {
-  const { text, onClick } = props;
+  const { text, onClick, testId } = props;
 
   return (
-    <button onClick={onClick} className="bg-green-500">
+    <button data-testid={testId} onClick={onClick} className="bg-green-500">
       {text}
     </button>
   );

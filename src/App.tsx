@@ -27,11 +27,11 @@ function App() {
   return (
     <>
       <p className="text-red-500">Hello World</p>
-
+      <div data-testid="list">
       {todos.map((todo, idx) => {
         return (
           <div  key={idx}>
-            <div data-testid="list" >{todo.value}</div>
+            <div>{todo.value}</div>
             <Checkbox
               onChange={() => {
                 const newTodosValue = todos.map((todo, todoIdx) => {
@@ -48,7 +48,8 @@ function App() {
           </div>
         );
       })}
-      <Button text="Add task" onClick={addNewTodo} />
+      </div>
+      <Button testId="add-todo-button" text="Add task" onClick={addNewTodo} />
       <Input
         value={inputValue}
         onChange={(e) => {
@@ -57,6 +58,7 @@ function App() {
         }}
         type="text"
         placeholder="New Task"
+        testId="new-todo-input"
       />
     </>
   );

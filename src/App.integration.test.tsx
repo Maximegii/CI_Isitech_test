@@ -2,7 +2,7 @@ import {render, screen} from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import {test, expect} from 'vitest';
 import App from './App';
-    
+
 test ('Add item to TODO', async () => {
     render(<App />);
     const user = userEvent.setup();
@@ -10,7 +10,7 @@ test ('Add item to TODO', async () => {
     const list = screen.getByTestId('list');
     const input = screen.getByPlaceholderText('New Task');
 
-    await user.type(input,'Nourrir le chat.');
+    await user.type(input,'Nourrir le chat');
 
     await user.click(btn);
 
