@@ -30,8 +30,8 @@ function App() {
 
       {todos.map((todo, idx) => {
         return (
-          <div key={idx}>
-            <div>{todo.value}</div>
+          <div  key={idx}>
+            <div data-testid="list" >{todo.value}</div>
             <Checkbox
               onChange={() => {
                 const newTodosValue = todos.map((todo, todoIdx) => {
